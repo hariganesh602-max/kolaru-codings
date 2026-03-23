@@ -8,8 +8,15 @@
     name="description"
     content="Kolaru Codings builds premium, smooth and modern websites for businesses."
   />
+
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
+
+  <link
+    rel="preload"
+    as="image"
+    href="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=70"
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +51,35 @@
     </div>
   </div>
 
+  <div class="success-popup" id="successPopup">
+    <div class="success-box">
+      <div class="success-particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="success-orb orb-1"></div>
+      <div class="success-orb orb-2"></div>
+      <div class="success-orb orb-3"></div>
+
+      <div class="success-icon-wrap">
+        <div class="success-ring ring-a"></div>
+        <div class="success-ring ring-b"></div>
+        <div class="success-ring ring-c"></div>
+        <div class="success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+      <h3>Details Sent Successfully</h3>
+      <p>Your details are prepared and opened in WhatsApp. We’ll connect with you soon.</p>
+    </div>
+  </div>
+
   <div class="floating-socials">
     <a
       href="https://www.instagram.com/kolaru_codings?igsh=aHRhcDI2bG5ibGV3"
@@ -64,6 +100,20 @@
     </a>
   </div>
 
+  <div class="cta-click-burst" id="ctaClickBurst">
+    <div class="cta-burst-shadow"></div>
+    <div class="cta-burst-ring ring-outer"></div>
+    <div class="cta-burst-ring ring-middle"></div>
+    <div class="cta-burst-ring ring-inner"></div>
+    <div class="cta-burst-core"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <div class="logo pop-up">
@@ -72,7 +122,7 @@
         </span>
         <div>
           <h2>Kolaru Codings</h2>
-          <p>Websites that make businesses look premium</p>
+          <p>Premium business websites</p>
         </div>
       </div>
 
@@ -82,7 +132,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
-        <a href="#your-details">Your Details</a>
+        <a href="#your-details" class="order-link trigger-order-animation">Place Your Order</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -106,7 +156,7 @@
         >
           <i class="fa-brands fa-instagram"></i>
         </a>
-        <button class="menu-btn" id="menuBtn">
+        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -133,7 +183,7 @@
           </div>
 
           <div class="hero-buttons">
-            <a href="#your-details" class="btn btn-primary">Start Your Project</a>
+            <a href="#your-details" class="btn btn-primary trigger-order-animation">Start Your Project</a>
             <a
               href="https://wa.me/919360310580?text=Hi%20Kolaru%20Codings,%20I%20want%20to%20build%20a%20website%20for%20my%20business."
               target="_blank"
@@ -173,8 +223,10 @@
         <div class="hero-card pop-up delay-1">
           <div class="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=70"
               alt="Premium coding workspace"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
           <div class="hero-card-content">
@@ -219,8 +271,10 @@
           <article class="portfolio-card pop-up">
             <div class="portfolio-image">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=70"
                 alt="Business website project"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="portfolio-content">
@@ -233,8 +287,10 @@
           <article class="portfolio-card pop-up delay-1">
             <div class="portfolio-image">
               <img
-                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=70"
                 alt="E-commerce website project"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="portfolio-content">
@@ -247,8 +303,10 @@
           <article class="portfolio-card pop-up delay-2">
             <div class="portfolio-image">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=70"
                 alt="CMS website project"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="portfolio-content">
@@ -502,19 +560,19 @@
         </div>
 
         <div class="pricing-extra">
-          <div class="extra-card pop-up">
+          <div class="extra-card pricing-info-card pop-up">
             <h3>💡 Hosting Details</h3>
             <p>1 Year FREE (for basic website) 🎉</p>
             <p>Renewal: ₹1500/year</p>
           </div>
 
-          <div class="extra-card pop-up delay-1">
+          <div class="extra-card pricing-info-card pop-up delay-1">
             <h3>🎁 Bonus</h3>
             <p>Free Ad Posters</p>
             <p>Basic SEO setup</p>
           </div>
 
-          <div class="extra-card pop-up delay-2">
+          <div class="extra-card pricing-info-card pop-up delay-2">
             <h3>⏱ Delivery Time</h3>
             <p>1–3 days</p>
             <p>Fast and smooth delivery process</p>
@@ -523,79 +581,97 @@
       </div>
     </section>
 
-    <section class="section big-info-section" id="your-details">
-      <div class="container">
-        <div class="section-head pop-up">
-          <span class="section-tag">Project Information</span>
-          <h2>Your Details</h2>
-          <p>
-            Share your details clearly so we can communicate smoothly throughout the project.
-          </p>
-        </div>
+    <form id="projectForm">
+      <section class="section big-info-section order-section" id="your-details">
+        <div class="container">
+          <div class="section-head pop-up">
+            <span class="section-tag order-aqua-tag">Project Information</span>
+            <h2>Place Your Order</h2>
+            <p>
+              Share your details clearly so we can communicate smoothly throughout the project.
+            </p>
+          </div>
 
-        <div class="big-form-card pop-up">
-          <div class="big-form-grid">
-            <div class="big-input pop-up">
-              <label>Your Name</label>
-              <input type="text" placeholder="Enter your name" />
-            </div>
-            <div class="big-input pop-up delay-1">
-              <label>Phone Number</label>
-              <input type="tel" placeholder="Enter phone number" />
-            </div>
-            <div class="big-input pop-up delay-2">
-              <label>WhatsApp Number</label>
-              <input type="tel" placeholder="Enter WhatsApp number" />
-            </div>
-            <div class="big-input pop-up">
-              <label>Email Address</label>
-              <input type="email" placeholder="Enter email address" />
+          <div class="big-form-card order-form-card pop-up">
+            <div class="big-form-grid">
+              <div class="big-input form-order-box pop-up">
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" placeholder="Enter your name" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-1">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="Enter phone number" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-2">
+                <label for="whatsappNumber">WhatsApp Number</label>
+                <input type="tel" id="whatsappNumber" placeholder="Enter WhatsApp number" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up">
+                <label for="emailAddress">Email Address</label>
+                <input type="email" id="emailAddress" placeholder="Enter email address" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section dark-section big-info-section" id="business-details">
-      <div class="container">
-        <div class="section-head pop-up">
-          <span class="section-tag">Project Information</span>
-          <h2>Your Business Details</h2>
-          <p>
-            Tell us about your business so we can build the right structure, design and features.
-          </p>
-        </div>
+      <section class="section dark-section big-info-section order-section" id="business-details">
+        <div class="container">
+          <div class="section-head pop-up">
+            <span class="section-tag order-aqua-tag">Project Information</span>
+            <h2>Your Business Details</h2>
+            <p>
+              Tell us about your business so we can build the right structure, design and features.
+            </p>
+          </div>
 
-        <div class="big-form-card pop-up">
-          <div class="big-form-grid">
-            <div class="big-input pop-up">
-              <label>Business Name</label>
-              <input type="text" placeholder="Enter business name" />
+          <div class="big-form-card order-form-card pop-up">
+            <div class="big-form-grid">
+              <div class="big-input form-order-box pop-up">
+                <label for="businessName">Business Name</label>
+                <input type="text" id="businessName" placeholder="Enter business name" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-1">
+                <label for="businessCategory">Business Category</label>
+                <input type="text" id="businessCategory" placeholder="Enter business category" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-2">
+                <label for="websitePurpose">Purpose of Website</label>
+                <input type="text" id="websitePurpose" placeholder="Lead generation / branding / sales / bookings" required />
+              </div>
+
+              <div class="big-input form-order-box pop-up">
+                <label for="businessLocation">Business Location</label>
+                <input type="text" id="businessLocation" placeholder="Enter business location" />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-1">
+                <label for="requiredPages">Required Pages</label>
+                <input type="text" id="requiredPages" placeholder="Home, About, Services, Contact..." />
+              </div>
+
+              <div class="big-input form-order-box pop-up delay-2">
+                <label for="featuresNeeded">Features Needed</label>
+                <input type="text" id="featuresNeeded" placeholder="WhatsApp, CMS, payment, login..." />
+              </div>
             </div>
-            <div class="big-input pop-up delay-1">
-              <label>Business Category</label>
-              <input type="text" placeholder="Enter business category" />
-            </div>
-            <div class="big-input pop-up delay-2">
-              <label>Purpose of Website</label>
-              <input type="text" placeholder="Lead generation / branding / sales / bookings" />
-            </div>
-            <div class="big-input pop-up">
-              <label>Business Location</label>
-              <input type="text" placeholder="Enter business location" />
-            </div>
-            <div class="big-input pop-up delay-1">
-              <label>Required Pages</label>
-              <input type="text" placeholder="Home, About, Services, Contact..." />
-            </div>
-            <div class="big-input pop-up delay-2">
-              <label>Features Needed</label>
-              <input type="text" placeholder="WhatsApp, CMS, payment, login..." />
+
+            <div class="form-submit-wrap pop-up">
+              <button type="submit" class="btn btn-primary submit-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Details
+              </button>
+              <p class="submit-note">Fill your details and send them directly to us.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </form>
 
     <section class="section cta-section" id="contact">
       <div class="container cta-box pop-up">
@@ -606,7 +682,7 @@
         </p>
 
         <div class="center-only-btn">
-          <a href="#your-details" class="btn btn-primary">Start Project</a>
+          <a href="#your-details" class="btn btn-primary trigger-order-animation">Start Your Project</a>
         </div>
 
         <div class="cta-contact-row">
@@ -637,7 +713,7 @@
           </span>
           <div>
             <h2>Kolaru Codings</h2>
-            <p>Professional website development services</p>
+            <p>Premium websites for modern businesses</p>
           </div>
         </div>
 
